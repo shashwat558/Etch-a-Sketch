@@ -54,10 +54,10 @@ button {
     border-radius: 7px;
     transition: transform 0.3s ease;
     font-size:15px;
-    
+    font-weight: bold;
 }
 button:hover{
-    background-color: rgb(155, 146, 146);
+    background-color: rgb(116, 111, 111);
     transform: scale(1.2);
     
 }
@@ -65,8 +65,16 @@ button:hover{
 #grid {
     height: 650px;
     width: 550px;
+    display: flex;
+    flex-wrap: wrap;
     background-color: #fff;
     margin-bottom: 200px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+
 }
 
+#grid #block{
+    height: 40.632px;
+    width: 40.632px;
+    background-color: red;
+} 
