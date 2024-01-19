@@ -26,6 +26,8 @@ function createCanvas(size){
                 rowBlocks.style.backgroundColor = 'black';
             })
 
+            
+
 
 
             column.appendChild(rowBlocks);
@@ -36,10 +38,6 @@ function createCanvas(size){
 }
 
 createCanvas(16)
-
-
-
-
 
 
 function gridSize() {
@@ -66,5 +64,18 @@ function erase(){
         rowBlocks.style.backgroundColor = 'white';
     })
 
+}
+
+
+function eraser(){
+    const gridItems = document.querySelectorAll('.column .rowBlocks');
+    
+    gridItems.forEach(rowBlocks => {
+        rowBlocks.addEventListener('mouseenter', function(){
+            if(rowBlocks.style.backgroundColor === 'black'){
+                rowBlocks.style.backgroundColor = 'white';
+            }
+        })
+    })
 }
 
