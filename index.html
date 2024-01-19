@@ -13,13 +13,15 @@
     <div id="main">
         <div id="settings">
             <button class="erasebtn">Erase</button>
-            <button class="clearbtn">Clear</button>
+            <button class="clearbtn" onclick="erase()">Clear</button>
             <div id="sizen">
              <button class="changeSize" onclick="gridSize()">Change size</button>
+             <input type="range" id="slider" min="1" max="64" value="16">
             </div>
            
         </div>
         <div id="grid">
+            
         </div>
         
     </div>

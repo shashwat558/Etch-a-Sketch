@@ -1,3 +1,4 @@
+
 const clrbtn = document.getElementById('clearbtn');
 const erasebtn = document.getElementById('erasebtn');
 const grid = document.getElementById('grid');
@@ -6,12 +7,14 @@ const sizeChanger = document.getElementById('sizen')
 function createCanvas(size){
     for (let i = 0; i < size; i++) {
         let column = document.createElement('div');
+        column.classList.add('column');
         column.style.display = "flex";
         column.style.flexDirection = "column";
-        column.style.flexGrow = 1; // Set flex-grow to 1 for the flex container
+        column.style.flex = 1; // Set flex-grow to 1 for the flex container
 
         for (let j = 0; j < size; j++) {
             let rowBlocks = document.createElement('div');
+            rowBlocks.classList.add('rowBlocks')
             rowBlocks.style.backgroundColor = 'white';
             rowBlocks.style.flex = 1;
             rowBlocks.style.border = "0.01px solid black";
@@ -24,6 +27,7 @@ function createCanvas(size){
             })
 
 
+
             column.appendChild(rowBlocks);
 
         }
@@ -32,6 +36,8 @@ function createCanvas(size){
 }
 
 createCanvas(16)
+
+
 
 
 
@@ -54,11 +60,11 @@ function gridSize() {
 }     
     
 }
+function erase(){
+    const gridItems = document.querySelectorAll('.column .rowBlocks');
+    gridItems.forEach(rowBlocks =>{
+        rowBlocks.style.backgroundColor = 'white';
+    })
 
-
-
-
-
-
-
+}
 
